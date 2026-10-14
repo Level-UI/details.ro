@@ -1,10 +1,23 @@
+Here is the repaired Romanian page, complete and ready to paste. It's also saved at `D:\Design\_deploy-tmp\github-details\details.ro\index.html`.
+
+**What I fixed:**
+- **Removed the two leftover instructions:** "Înlocuiți acest URL…" and "Înlocuiți sau completați conținutul cu studii de caz reale…".
+- **Deleted the og:image comment.** The image tags now point to the English page's image, because `details.ro/level-ui-og.jpg` returns 404. If you upload the jpg to this repo, you can switch them back to `details.ro`.
+- **Links don't redirect any more:** `/services` and `/contact` without the trailing slash.
+- **No space before the full stop** after "serviciile Level UI".
+- **Informal *tu* throughout,** matching levelui.ro. Your version mixed *aveți* and *lansați* with *Vizitează* and *Contactează*.
+- **"metadata" → "metadate".**
+- **Removed "România" from the title,** to match the other two pages.
+- **Language links:** added hreflang tags, plus English and Deutsch links in the footer.
+
+```html
 <!doctype html>
 <html lang="ro">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Level UI România — Web Design, Dezvoltare Web & UI/UX</title>
+  <title>Level UI — Web Design, Dezvoltare Web &amp; UI/UX</title>
 
   <meta
     name="description"
@@ -16,29 +29,32 @@
   <meta name="author" content="Level UI">
 
   <link rel="canonical" href="https://level-ui.github.io/details.ro/">
+  <link rel="alternate" hreflang="en" href="https://level-ui.github.io/details.en/">
+  <link rel="alternate" hreflang="de" href="https://level-ui.github.io/details.de/">
+  <link rel="alternate" hreflang="ro" href="https://level-ui.github.io/details.ro/">
+  <link rel="alternate" hreflang="x-default" href="https://level-ui.github.io/details.en/">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Level UI">
-  <meta property="og:title" content="Level UI România — Web Design, Dezvoltare Web & UI/UX">
+  <meta property="og:locale" content="ro_RO">
+  <meta property="og:title" content="Level UI — Web Design, Dezvoltare Web &amp; UI/UX">
   <meta
     property="og:description"
     content="Website-uri, platforme digitale, UX/UI, dezvoltare frontend și optimizare tehnică pentru companii care vor un produs digital mai bun."
   >
   <meta property="og:url" content="https://level-ui.github.io/details.ro/">
-
-  <!-- Change filename to match the exact image you upload in repository root -->
-  <meta property="og:image" content="https://level-ui.github.io/details.ro/level-ui-og.jpg">
+  <meta property="og:image" content="https://level-ui.github.io/details.en/level-ui-og.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Level UI România — web design, dezvoltare web și UI/UX">
+  <meta property="og:image:alt" content="Level UI — web design, dezvoltare web și UI/UX">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Level UI România — Web Design, Dezvoltare Web & UI/UX">
+  <meta name="twitter:title" content="Level UI — Web Design, Dezvoltare Web &amp; UI/UX">
   <meta
     name="twitter:description"
     content="Website-uri, platforme digitale, UX/UI, dezvoltare frontend și optimizare tehnică pentru companii."
   >
-  <meta name="twitter:image" content="https://level-ui.github.io/details.ro/level-ui-og.jpg">
+  <meta name="twitter:image" content="https://level-ui.github.io/details.en/level-ui-og.jpg">
 
   <script type="application/ld+json">
   {
@@ -449,6 +465,12 @@
       color: #d8f8f3;
     }
 
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+    }
+
     @media (max-width: 820px) {
       .header-inner {
         padding-bottom: 62px;
@@ -575,9 +597,9 @@
 
         <p class="section-lead">
           Lucrăm cu echipe care au nevoie de mai mult decât un șablon. Fie că
-          lansați un serviciu nou, modernizați un site existent sau construiți
-          o aplicație web, urmărim să livrăm un produs care este clar pentru
-          utilizatori și solid din punct de vedere tehnic.
+          lansezi un serviciu nou, modernizezi un site existent sau construiești
+          o aplicație web, urmărim să livrăm un produs clar pentru utilizatori
+          și solid din punct de vedere tehnic.
         </p>
 
         <div class="service-grid">
@@ -604,7 +626,7 @@
             <div class="card-number" aria-hidden="true">03</div>
             <h3>SEO tehnic și optimizare</h3>
             <p>
-              Structură semantică, performanță, indexabilitate, metadata,
+              Structură semantică, performanță, indexabilitate, metadate,
               experiență mobilă și fundația tehnică necesară pentru vizibilitate
               organică mai bună.
             </p>
@@ -612,15 +634,12 @@
         </div>
 
         <p class="callout">
-          Pentru informații despre servicii și un proiect nou, consultați
+          Pentru detalii despre servicii și despre cum pornește un proiect nou, vezi
           <a
-            href="https://levelui.ro/services/"
+            href="https://levelui.ro/services"
             target="_blank"
             rel="noopener noreferrer"
-          >
-            serviciile Level UI
-          </a>.
-          Înlocuiți acest URL numai dacă pagina reală de servicii are o adresă diferită.
+          >serviciile Level UI</a>.
         </p>
       </section>
 
@@ -660,9 +679,7 @@
         <h2 id="titlu-proiecte">Tipuri de proiecte pe care le abordăm</h2>
 
         <p class="section-lead">
-          Exemplele de mai jos descriu tipuri de colaborări. Înlocuiți sau
-          completați conținutul cu studii de caz reale, doar atunci când aveți
-          aprobarea de a publica detaliile proiectului.
+          Exemplele de mai jos descriu tipuri de colaborări.
         </p>
 
         <div class="case-grid">
@@ -690,17 +707,17 @@
 
       <section id="contact" aria-labelledby="titlu-contact">
         <div class="contact-panel">
-          <h2 id="titlu-contact">Aveți un proiect în pregătire?</h2>
+          <h2 id="titlu-contact">Ai un proiect în pregătire?</h2>
 
           <p>
-            Dacă aveți nevoie de un website, o platformă digitală, un redesign
-            sau suport pentru UX/UI și dezvoltare frontend, spuneți-ne contextul
-            proiectului și obiectivele pe care vreți să le atingeți.
+            Dacă ai nevoie de un website, o platformă digitală, un redesign
+            sau suport pentru UX/UI și dezvoltare frontend, spune-ne contextul
+            proiectului și obiectivele pe care vrei să le atingi.
           </p>
 
           <a
             class="button button-primary"
-            href="https://levelui.ro/contact/"
+            href="https://levelui.ro/contact"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -716,14 +733,13 @@
     <div class="container footer-inner">
       <p>&copy; 2026 Level UI. Design, dezvoltare web și experiențe digitale.</p>
 
-      <a
-        href="https://levelui.ro/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        levelui.ro
-      </a>
+      <div class="footer-links">
+        <a href="https://level-ui.github.io/details.en/" hreflang="en" lang="en">English</a>
+        <a href="https://level-ui.github.io/details.de/" hreflang="de" lang="de">Deutsch</a>
+        <a href="https://levelui.ro/" target="_blank" rel="noopener noreferrer">levelui.ro</a>
+      </div>
     </div>
   </footer>
 </body>
 </html>
+```
